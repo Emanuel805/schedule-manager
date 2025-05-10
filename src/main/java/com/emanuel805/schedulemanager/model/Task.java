@@ -18,6 +18,20 @@ public class Task {
     private LocalDate deadline;
     private int priority;
 
+    protected Task() {}
+
+    public Task(String name, String description, LocalDate deadline, int priority) {
+        this.name = name;
+        this.description = description;
+        this.deadline = deadline;
+        this.priority = priority;
+    }
+
+    public Task(long id, String name, int priority, LocalDate deadline, String description) {
+        this(name, description, deadline, priority);
+        this.id = id;
+    }
+
     public int getPriority() {
         return priority;
     }
