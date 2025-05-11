@@ -5,7 +5,9 @@ import com.emanuel805.schedulemanager.dto.TaskDTO;
 import java.util.List;
 
 public interface TaskService {
-    List<TaskDTO> getAllTasks;
+    TaskDTO getTaskById(long id);
+    List<TaskDTO> getAllTasks();
     TaskDTO createTask(TaskDTO taskDTO);
-    void deleteTask(Long id);
+    TaskDTO updateTask(long id, TaskDTO taskDTO);
+    void deleteTask(long id);
 }
