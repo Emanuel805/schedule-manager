@@ -6,6 +6,7 @@ import com.emanuel805.schedulemanager.repository.TaskRepository;
 import com.emanuel805.schedulemanager.service.TaskService;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,10 +50,19 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public void deleteTask(long id) {
-        if (taskRepository.existsById(id)) {
+        if (!taskRepository.existsById(id)) {
             throw new RuntimeException("Task with id" + id + "not found");
         }
         taskRepository.deleteById(id);
+    }
+
+    @Override
+    public List<TaskDTO> getUpcomingTasks() {
+        LocalDate upcomingDate = LocalDate.now().plusDays(10);
+        return taskRepository.findByDeadlineBefore(upcomingDate)
+                .stream()
+                .map(this::convertTaskToDTO)
+                .collect(Collectors.toList());
     }
 
     private TaskDTO convertTaskToDTO(Task task) {

@@ -12,7 +12,9 @@
 	<artifactId>schedule-manager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ScheduleManager</name>
-	<description>A Java-based scheduling application using Spring Boot, PostgreSQL &amp; JavaFX. Helps users efficiently manage tasks, deadlines, and priorities.</description>
+	<description>A Java-based scheduling application using Spring Boot, PostgreSQL &amp; JavaFX.
+		Helps users efficiently manage tasks, deadlines, and priorities.
+	</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -35,8 +37,9 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.8.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,6 +60,17 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!-- JavaFX Dependencies -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>21.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>21.0.2</version>
 		</dependency>
 	</dependencies>
 
