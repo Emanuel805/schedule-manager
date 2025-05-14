@@ -14,7 +14,7 @@ public class JavaFxApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/schedule_manager.fxml"));
         Label label = new Label("Hello World");
         StackPane root = new StackPane();
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 1280, 720);
 
         primarystage.setTitle("Schedule Manager");
         primarystage.setScene(scene);

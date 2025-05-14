@@ -27,6 +27,6 @@ public class ScheduleManagerController {
         List<TaskDTO> upcomingTasks = taskService.getUpcomingTasks();
         taskListView.getItems().clear();
         upcomingTasks.forEach(task -> taskListView.getItems().add(task.name()));
-        notificationService.showTaskNotification("Upcoming tasks updated!");
+        notificationService.showTaskNotification();
     }
 }
