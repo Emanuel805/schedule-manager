@@ -3,6 +3,8 @@ package com.emanuel805.schedulemanager.ui;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -29,8 +31,14 @@ public class JavaFxApplication extends Application {
         text.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
         text.setFill(Color.WHITE);
 
+        Image image = new Image("/cat.gif");
+        ImageView imageView = new ImageView(image);
+        imageView.setX(400);
+        imageView.setY(400);
+
 
         root.getChildren().add(text);
+        root.getChildren().add(imageView);
         stage.setScene(scene);
         stage.show();
 
