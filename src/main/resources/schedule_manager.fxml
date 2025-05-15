@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emanuel805.schedulemanager.controller.ScheduleManagerController">
    <children>
-      <Ellipse fx:id="homeeclipse" fill="DODGERBLUE" layoutX="158.0" layoutY="306.0" radiusX="100.0" radiusY="80.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.topAnchor="226.0" />
-      <Rectangle fx:id="menupanel" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="77.0" layoutX="128.0" layoutY="103.0" stroke="BLACK" strokeType="INSIDE" width="397.0" />
+      <Ellipse fx:id="homeeclipse" fill="DODGERBLUE" layoutX="115.0" layoutY="142.0" radiusX="100.0" radiusY="80.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.topAnchor="62.0" />
+      <Rectangle fx:id="menupanel" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="77.0" layoutX="115.0" layoutY="256.0" stroke="BLACK" strokeType="INSIDE" width="397.0" />
+      <Circle fill="DODGERBLUE" layoutX="356.0" layoutY="122.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>

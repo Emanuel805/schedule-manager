@@ -30,7 +30,7 @@ public class TaskServiceImpl implements TaskService {
         List<Task> alltasks = taskRepository.findAll();
 
         return alltasks.stream()
-                .map(task -> convertTaskToDTO(task)).toList();
+                .map(this::convertTaskToDTO).toList();
     }
 
     @Override
