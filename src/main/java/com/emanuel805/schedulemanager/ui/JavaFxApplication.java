@@ -24,20 +24,15 @@ public class JavaFxApplication extends Application {
         Stage stage = new Stage();
 
         Text text = new Text();
-        text.setText("I couldn't implement the interface too much work :( interface at\n " +
+        text.setText("interface at\n " +
                 "https://www.figma.com/design/kRYdnRi132e7ImZTHFvVpc/Untitled?node-id=0-1&t=lx6uNMzIXXEFvBje-1");
         text.setX(50);
         text.setY(50);
         text.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
         text.setFill(Color.WHITE);
 
-        Image image = new Image("/cat.gif");
-        ImageView imageView = new ImageView(image);
-        imageView.setX(400);
-        imageView.setY(400);
 
         root.getChildren().add(text);
-        root.getChildren().add(imageView);
         stage.setScene(scene);
         stage.show();
 

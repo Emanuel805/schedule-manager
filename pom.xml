@@ -12,7 +12,7 @@
 	<artifactId>schedule-manager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ScheduleManager</name>
-	<description>A Java-based scheduling application using Spring Boot, PostgreSQL &amp; JavaFX.
+	<description>A Java-based scheduling application using Spring Boot, PostgreSQL
 		Helps users efficiently manage tasks, deadlines, and priorities.
 	</description>
 	<url/>
