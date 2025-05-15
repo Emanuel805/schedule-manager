@@ -1,17 +1,19 @@
 package com.emanuel805.schedulemanager.service.impl;
 
 import com.emanuel805.schedulemanager.dto.TaskDTO;
-import com.emanuel805.schedulemanager.model.Task;
 import com.emanuel805.schedulemanager.service.NotificationService;
 import com.emanuel805.schedulemanager.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class NotificationServiceImpl implements NotificationService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(NotificationServiceImpl.class);
     private final TaskService taskService;
 
     @Autowired
@@ -26,7 +28,7 @@ public class NotificationServiceImpl implements NotificationService {
         LocalDate today = LocalDate.now();
         dueSoonTasks.stream()
                 .filter(taskDTO -> taskDTO.deadline().isBefore(today.plusDays(1)))
-                .forEach(taskDTO -> System.out.println(taskDTO.name() + " is due soon on " + taskDTO.deadline()));
-
+                .forEach(taskDTO ->
+                        LOGGER.info("{} is due soon on {}", taskDTO.name(), taskDTO.deadline()));
     }
 }

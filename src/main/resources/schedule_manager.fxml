@@ -6,19 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.emanuel805.schedulemanager.controller.ScheduleManagerController"
+            prefHeight="400.0" prefWidth="600.0" >
 
-<GridPane fx:id="mainGrid" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="com.emanuel805.schedulemanager.controller.ScheduleManagerController">
-
-    <Label text="Schedule Manager" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-
-    <Button text="Check Upcoming Tasks" onAction="#checkForUpcomingTasks" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-
-    <ListView fx:id="taskListView" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-
-</GridPane>
+</AnchorPane>

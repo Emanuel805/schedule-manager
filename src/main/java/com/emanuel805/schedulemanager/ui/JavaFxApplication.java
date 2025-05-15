@@ -11,8 +11,7 @@ public class JavaFxApplication extends Application {
 
     @Override
     public void start(Stage primarystage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/schedule_manager.fxml"));
-        Label label = new Label("Hello World");
+        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/schedule_manager.fxml"));
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 1280, 720);
 

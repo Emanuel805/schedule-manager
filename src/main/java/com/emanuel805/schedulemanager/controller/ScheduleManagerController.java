@@ -5,12 +5,13 @@ import com.emanuel805.schedulemanager.service.NotificationService;
 import com.emanuel805.schedulemanager.service.TaskService;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
-@Component
+@Controller
 public class ScheduleManagerController {
+
     @FXML
     private ListView<String> taskListView;
 
